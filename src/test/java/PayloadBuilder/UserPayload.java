@@ -1,6 +1,11 @@
 package PayloadBuilder;
 
+import io.restassured.http.ContentType;
+import io.restassured.response.Response;
 import org.json.simple.JSONObject;
+
+import static commons.paths.BASE_URL;
+import static io.restassured.RestAssured.given;
 
 public class UserPayload {
 
@@ -11,4 +16,18 @@ public class UserPayload {
 
         return userLogin;
     }
+
+    public static JSONObject registerUserPayload(String firstName, String lastName, String email, String password, String groupId) {
+        JSONObject registerUser = new JSONObject();
+        registerUser.put("firstName", firstName);
+        registerUser.put("lastName", lastName);
+        registerUser.put("email", email);
+        registerUser.put("password", password);
+        registerUser.put("confirmPassword", password);
+        registerUser.put("groupId", groupId);
+
+        return registerUser;
+    }
+
+
 }
