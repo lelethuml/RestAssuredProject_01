@@ -9,27 +9,28 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import requestBuilder.AdminRequestBuilder;
 import requestBuilder.UserRequest;
+import utils.DatabaseConnection;
 
 import java.sql.SQLException;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 
-public class RegistrationTests {
+//public class RegistrationTests {
 
-    import com.github.javafaker.Faker;
-import io.qameta.allure.Severity;
-import io.qameta.allure.SeverityLevel;
-import io.restassured.response.Response;
-import requestBuilder.AdminRequestBuilder;
-import requestBuilder.UserRequest;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
-import org.testng.Assert;
-import registrationTests.DatabaseConnection;
+//    import com.github.javafaker.Faker;
+//import io.qameta.allure.Severity;
+//import io.qameta.allure.SeverityLevel;
+//import io.restassured.response.Response;
+//import requestBuilder.AdminRequestBuilder;
+//import requestBuilder.UserRequest;
+//import org.testng.annotations.BeforeClass;
+//import org.testng.annotations.Test;
+//import org.testng.Assert;
+//import registrationTests.DatabaseConnection;
 
-import java.sql.SQLException;
+//import java.sql.SQLException;
 
-import static org.hamcrest.CoreMatchers.equalTo;
+//import static org.hamcrest.CoreMatchers.equalTo;
 
     public class RegistrationTests {
 
@@ -88,7 +89,7 @@ import static org.hamcrest.CoreMatchers.equalTo;
 
         @Test (priority = 4)
         public void userLoginTest() {
-            requestBuilder.UserRequest.loginUser(DatabaseConnection.getEmail, DatabaseConnection.getPassword)
+            requestBuilder.UserRequest.loginUser(email, password)
                     .then().log().all()
                     .assertThat()
                     .statusCode(200)
@@ -98,4 +99,4 @@ import static org.hamcrest.CoreMatchers.equalTo;
 
     }
 
-}
+

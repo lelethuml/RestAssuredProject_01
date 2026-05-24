@@ -1,10 +1,7 @@
 package PayloadBuilder;
 
-import io.restassured.http.ContentType;
-import io.restassured.response.Response;
 import org.json.simple.JSONObject;
 
-import static commons.paths.BASE_URL;
 import static io.restassured.RestAssured.given;
 
 public class UserPayload {

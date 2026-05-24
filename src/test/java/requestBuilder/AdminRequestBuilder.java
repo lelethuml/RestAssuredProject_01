@@ -1,9 +1,8 @@
 package requestBuilder;
 
 import io.restassured.response.Response;
-import org.apache.http.client.methods.RequestBuilder;
 
-import static commons.paths.BASE_URL;
+import static commons.Paths.BASE_URL;
 import static io.restassured.RestAssured.given;
 
 public class AdminRequestBuilder {
